@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+ <style>
+   *{
+  margin: 0;
+  padding: 0;
+  font-family: sens-serif;
+  list-style:none;
+  text-decoration:none;
+}
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+.menu{
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+   .item{
+   border-top: 1px solid #2980b9;
+     overflow: hidden;
+   }
+   .btn{
+   display: block;
+     padding: 16px 20px;
+     background: #3498db;
+     color: white;
+     position: relative;
+   }
+   .btn:before{
+   content: "";
+     position: absolute;
+     width: 14px;
+     heigth: 14px;
+     background: #3498db;
+     left: 20px;
+     bottom: -7px;
+     transform: rotate(45deg); 
+   }
+   .btn i{
+   margin-right: 10px;
+   }
+   .smenu{
+   background: #333;
+     overflow: hidden;
+     transition: max-height 0.3s;
+     max-height:0;
+   }
+   .smenu a{
+   display: block; 
+     padding: 16px 26px;
+     color: white;
+     font-size: 14px;
+     margin: 4px 0;
+     position: relative;
+   }
+   .smenu a:before{
+   content : "";
+     position: absolute;
+     width:6px;
+     height:100%;
+     background: #3498db;
+     left:0;
+     top:0;
+     transition:0.3;
+     opacity:0;
+   }
+   .smenu a:hover:before{
+   opacity:1;
+   }
+   .item:target .smenu{
+   max-height: 30em;
+   }
+  </style>
+  </head>
+  <body>
+    <div class="middle">
+    <div class="menu">
+      <li class="item" id="General-Commands">
+        <a href="#General-Commands" class="btn">👑General commands👑</a>
+        <div class="smenu">
+          <a href="./help.html">~help</a>
+          <a href="#">~serverinfo</a>
+          <a href="#">~userinfo</a>
+          <a href="#">~uptime</a>
+          <a href="#">~avatar [user]</a>
+        </div>
+      </li>
+            <li class="item" id="Fun">
+        <a href="#Fun" class="btn">😂Fun😂</a>
+        <div class="smenu">
+          <a href="#">~meme</a>
+          <a href="#">~8ball [question]</a>
+        </div>
+      </li>
+            <li class="item" id="Administration">
+        <a href="#Administration" class="btn">👮🏻Administration👮🏻</a>
+        <div class="smenu">
+          <a href="#">~role-id [role] [roleID]</a>
+          <a href="#">~clear [amount]</a>
+        </div>
+      </li>
+            <li class="item" id="Fortnite">
+        <a href="#Fortnite" class="btn">💻Fortnite💻</a>
+        <div class="smenu">
+          <a href="#">~fortnite [platform] [username]</a>
+        </div>
+      </li>
+            <li class="item" id="Music">
+        <a href="#Music" class="btn">🎶Music🎶</a>
+        <div class="smenu">
+          <a href="#">~play [YouTube song link/ YouTube song name]</a>
+          <a href="#">~pause</a>
+          <a href="#">~stop</a>
+          <a href="#">~queue</a>
+          <a href="#">~skip</a>
+          <a href="#">~resume</a>
+          <a href="#">~np</a>
+          <a href="#">~volume [1-100]</a>
+        </div>
+      </li>
+      </div>
+    </div>
+</body>
+</html>

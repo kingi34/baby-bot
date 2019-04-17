@@ -61,9 +61,6 @@ message.channel.send(`Pong!`)
 if(cmd == `${prefix}botms`) {
 message.channel.send(` your bot ms ${bot.ping}ms`)
 } 
-  if(message.content == `<@${bot.user.id}>`) {
-    message.channel.send(`hellow`)
-  }
 
   if(!message.content.startsWith(prefix)) return;
 
